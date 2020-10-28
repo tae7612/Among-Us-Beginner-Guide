@@ -19,7 +19,7 @@ function setup() {
     radio.style('width', '60px');
     textAlign(CENTER);
     fill("white");
-    radio.style("color", 'white');
+    radio.style("color", 'black');
     radio.style("font-size", '25px');
     radio.style("display", 'inline');
     radio.position(100 ,10);
@@ -155,8 +155,10 @@ function draw() {
     val = radio.value();
     if (val == 'Dark') {
         currbg = darkbg;
+        radio.style("color", 'white');
     }else if (val == 'Light'){
         currbg = lightbg;
+        radio.style("color", 'black');
     }
 
 }
