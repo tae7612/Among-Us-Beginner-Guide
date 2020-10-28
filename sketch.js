@@ -151,7 +151,14 @@ function setup() {
 }
 
 function draw() {
-  background(currbg);
+    background(currbg);
+    val = radio.value();
+    if (val == 'Dark') {
+        currbg = darkbg;
+    }else if (val == 'Light'){
+        currbg = lightbg;
+    }
+
 }
 
 function playVideo(){
