@@ -5,16 +5,32 @@ function preload(){
 function setup() {
     darkbg = loadImage("assets/img/sillyAmongUsBg.jpg");
     lightbg = loadImage("assets/img/lightAmongUsBg.jpg");
+    currbg = lightbg;
     //Logo Image
     logo = createImg('assets/logo/Logo.png', 'the among us logo');
     logo.position(windowWidth/3,-30);
     getAudioContext().suspend();
+    
+    //Radio 
+    
+    radio = createRadio();
+    radio.option('Light');
+    radio.option('Dark');
+    radio.style('width', '60px');
+    textAlign(CENTER);
+    fill("white");
+    radio.style("color", 'white');
+    radio.style("font-size", '25px');
+    radio.style("display", 'inline');
+    radio.position(100 ,10);
+    radio.selected('Light');
     
     //Videos
     lore = createVideo("assets/video/Lore.mp4");
     lore.size(640, 360);
     lore.position(50,windowHeight/3);
     lore.style("display", "block");
+    lore.style("margin", "40px");
     lore.volume(1);
     
     
@@ -135,7 +151,7 @@ function setup() {
 }
 
 function draw() {
-  background(lightbg);
+  background(currbg);
 }
 
 function playVideo(){
