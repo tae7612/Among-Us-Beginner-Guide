@@ -1,5 +1,9 @@
 function preload(){
     auFont = loadFont('assets/font/AmaticSC-Bold.ttf');
+    lore = createVideo("assets/video/Lore.mp4");
+    gT = createVideo("assets/video/Game Theory.mp4");
+    stream = createVideo("assets/video/The Most Insane 900 IQ Among Us Outplay!.mp4");
+    caveman = createVideo("assets/video/CAVEMAN_MODE.mp4");
 }
 
 function setup() {
@@ -26,7 +30,7 @@ function setup() {
     radio.selected('Light');
     
     //Videos
-    lore = createVideo("assets/video/Lore.mp4");
+    
     lore.size(640, 360);
     lore.position(50,windowHeight/3);
     lore.style("display", "block");
@@ -34,21 +38,21 @@ function setup() {
     lore.volume(1);
     
     
-    gT = createVideo("assets/video/Game Theory.mp4");
+    
     gT.size(640, 360);
     gT.position(50,windowHeight/3);
     gT.style("display", "none");
     gT.volume(0);
 
     
-    stream = createVideo("assets/video/The Most Insane 900 IQ Among Us Outplay!.mp4");
+    
     stream.size(640, 360);
     stream.position(50,windowHeight/3);
     stream.style("display", "none");
     stream.volume(0);
 
     
-    caveman = createVideo("assets/video/CAVEMAN_MODE.mp4");
+    
     caveman.size(640, 360);
     caveman.position(50,windowHeight/3);
     caveman.style("display", "none");
